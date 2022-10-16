@@ -26,11 +26,11 @@ def match(variable):
 print('')
 
 while True:
-    print(' _________________________')
-    print('|                         |')
-    print('| ROCK, PAPER, SCISSORS   |')
-    print('|' + str(win) + ' WINS, ' + str(loss) + ' LOSSES, ' + str(tie) + ' TIES |')
-    print('|_________________________|')
+    print('               _________________________')
+    print('              |                         |')
+    print('              | ROCK, PAPER, SCISSORS   |')
+    print('              |' + str(win) + ' WINS, ' + str(loss) + ' LOSSES, ' + str(tie) + ' TIES |')
+    print('              |_________________________|')
     print('')
     cpu = random.choice(['ROCK', 'PAPER', 'SCISSORS'])
     user = match(input('Enter your choice (R)ock, (P)aper, (S)cissors or (Q)uit: '))
@@ -53,25 +53,27 @@ while True:
 
         if user == cpu:
             print()
-            print('It is a tie')
+            print('It is a Tie!')
             tie += 1
         elif user == "ROCK" and cpu == "PAPER":
             print()
-            print ("You lose")
+            print ("You Lose!")
             loss += 1
         elif user == "PAPER" and cpu == "SCISSORS":
             print()
-            print ("You lose")
+            print ("You Lose!")
             loss += 1
         elif user == "SCISSORS" and cpu == "ROCK":
             print()
-            print ("You lose")
+            print ("You Lose!")
             loss += 1
         else:
             print()
             print ('You win!')
             win += 1
 
+        user = ''
+        cpu = ''
         print('')
         sleep(2)
         print('')
