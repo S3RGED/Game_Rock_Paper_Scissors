@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
-import random, time
+import random
+from os import system, name
+from time import sleep
 
 win = 0
 loss = 0
 tie = 0
+
+def clear():
+    if name == 'nt':
+        var = system('cls')
+    else:
+        var = system('clear')
 
 def match(variable):
     if variable.capitalize() == 'R' or variable.upper() == 'ROCK':
@@ -34,13 +42,14 @@ while True:
     elif user == None:
         print('')
         print('Wrong input! Please enter R for rock, P for paper, S for scissors or Q for quit')
-        time.sleep(3)
+        sleep(3)
+        clear()
         continue
     else:
         print(user +  ' versus......')
-        time.sleep(1)
+        sleep(1)
         print(cpu)
-        time.sleep(1)
+        sleep(1)
 
         if user == cpu:
             print()
@@ -64,5 +73,6 @@ while True:
             win += 1
 
         print('')
-        time.sleep(2)
+        sleep(2)
         print('')
+        clear()
